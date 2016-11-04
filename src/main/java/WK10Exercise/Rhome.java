@@ -24,15 +24,14 @@ public class Rhome {
 
             if (listOfChildren.size() == 0) {
                 try {
-                    System.out.println("Riley goes back to watching TV");
+                    System.out.println("Riley watches TV");
                     listOfChildren.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
-                //System.out.println("Riley finds a child at the door");
             }
-            System.out.println("Riley finds a child at the door");
+            System.out.println("Riley answers the door");
             child = listOfChildren.get(0);
             listOfChildren.remove(0);
         }
@@ -40,7 +39,7 @@ public class Rhome {
         long duration=0;
         try
         {
-            System.out.println("Riley distributing the candy for child " + "'" + child.getName() + "'" );
+            //System.out.println("Riley distributing the candy for child " + "'" + child.getName() + "'" );
             duration = (long)(Math.random()*3);
             TimeUnit.SECONDS.sleep(duration);
         }
@@ -48,23 +47,23 @@ public class Rhome {
         {
             iex.printStackTrace();
         }
-        System.out.println("Candy given to child " + "'" + child.getName() + "'" );
+        System.out.println("Riley gives candy to " + child.getName());
 
 
     }
 
     public void addChild(Child child) {
 
-        System.out.println("Child " + "'" + child.getName() + "'" + " started");
+        System.out.println(child.getName() + " started");
 
         if (listOfChildren.size() == maxChildren) {
-            System.out.println("Child " + "'" + child.getName() + "'" + " left the house");
+            System.out.println(child.getName() + " left the house");
             return;
         }
 
         synchronized (listOfChildren) {
             listOfChildren.add(child);
-            System.out.println("Child " + "'" + child.getName() + "'" + " rings the bell");
+            System.out.println(child.getName() + " rings door bell");
             if (listOfChildren.size() == 1) {
                 listOfChildren.notify();
             }

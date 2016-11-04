@@ -13,6 +13,7 @@ public class TrickOrTreat {
         Thread thRiley = new Thread(riley);
         Thread thChild = new Thread(createChild);
 
+        System.out.println("Trick-Or-Treating begins");
         thChild.start();
         thRiley.start();
     }
