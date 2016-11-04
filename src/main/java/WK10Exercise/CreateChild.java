@@ -21,7 +21,7 @@ public class CreateChild implements Runnable{
 
             Thread thChild = new Thread(child);
             child.setName("Child "+thChild.getId());
-            System.out.println(child.getName() + "created");
+            System.out.println(child.getName() + " created");
             thChild.start();
 
             try
