@@ -25,7 +25,7 @@ public class CreateChild implements Runnable{
 
             try
             {
-                TimeUnit.SECONDS.sleep((long)(Math.random()*10));
+                TimeUnit.SECONDS.sleep((long)(Math.random()*3));
             }
             catch(InterruptedException iex)
             {
