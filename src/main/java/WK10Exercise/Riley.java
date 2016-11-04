@@ -12,18 +12,6 @@ public class Riley implements Runnable{
     }
     public void run()
     {
-        /**
-        System.out.println("Riley watching TV..");
-        try
-        {
-            Thread.sleep(10000);
-        }
-        catch(InterruptedException iex)
-        {
-            iex.printStackTrace();
-        }
-         **/
-
         System.out.println("Riley started");
         while(true)
         {

@@ -39,7 +39,7 @@ public class Rhome {
         long duration=0;
         try
         {
-            //System.out.println("Riley distributing the candy for child " + "'" + child.getName() + "'" );
+
             duration = (long)(Math.random()*3);
             TimeUnit.SECONDS.sleep(duration);
         }
