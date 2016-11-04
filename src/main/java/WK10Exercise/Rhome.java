@@ -62,10 +62,13 @@ public class Rhome {
             return;
         }
 
-        listOfChildren.add(child);
-        System.out.println("Child " + child.getName() + " rings the bell");
-        if (listOfChildren.size() == 1) {
-            listOfChildren.notify();
+        synchronized (listOfChildren) {
+            listOfChildren.add(child);
+            System.out.println("Child " + child.getName() + " rings the bell");
+            if (listOfChildren.size() == 1) {
+                listOfChildren.notify();
+            }
+
         }
     }
 
