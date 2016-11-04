@@ -20,7 +20,7 @@ public class CreateChild implements Runnable{
             Child child = new Child(home);
 
             Thread thChild = new Thread(child);
-            child.setName("child Thread "+thChild.getId());
+            child.setName("child Thread"+thChild.getId());
             thChild.start();
 
             try

@@ -40,7 +40,7 @@ public class Rhome {
         long duration=0;
         try
         {
-            System.out.println("Riley distributing the candy for child " + child.getName());
+            System.out.println("Riley distributing the candy for child " + "'" + child.getName() + "'" );
             duration = (long)(Math.random()*3);
             TimeUnit.SECONDS.sleep(duration);
         }
@@ -48,23 +48,23 @@ public class Rhome {
         {
             iex.printStackTrace();
         }
-        System.out.println("Candy given to child " + child.getName());
+        System.out.println("Candy given to child " + "'" + child.getName() + "'" );
 
 
     }
 
     public void addChild(Child child) {
 
-        System.out.println("Child " + child.getName() + " started");
+        System.out.println("Child " + "'" + child.getName() + "'" + " started");
 
         if (listOfChildren.size() == maxChildren) {
-            System.out.println("Child " + child.getName() + " left the house");
+            System.out.println("Child " + "'" + child.getName() + "'" + " left the house");
             return;
         }
 
         synchronized (listOfChildren) {
             listOfChildren.add(child);
-            System.out.println("Child " + child.getName() + " rings the bell");
+            System.out.println("Child " + "'" + child.getName() + "'" + " rings the bell");
             if (listOfChildren.size() == 1) {
                 listOfChildren.notify();
             }
