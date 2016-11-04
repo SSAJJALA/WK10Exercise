@@ -30,9 +30,9 @@ public class Rhome {
                     e.printStackTrace();
                 }
 
-                System.out.println("Riley finds a child at the door");
+                //System.out.println("Riley finds a child at the door");
             }
-
+            System.out.println("Riley finds a child at the door");
             child = listOfChildren.get(0);
             listOfChildren.remove(0);
         }
@@ -64,7 +64,7 @@ public class Rhome {
 
         listOfChildren.add(child);
         System.out.println("Child " + child.getName() + " rings the bell");
-        if (listOfChildren.size() > 0) {
+        if (listOfChildren.size() == 1) {
             listOfChildren.notify();
         }
     }

@@ -12,6 +12,7 @@ public class Riley implements Runnable{
     }
     public void run()
     {
+        /**
         System.out.println("Riley watching TV..");
         try
         {
@@ -21,7 +22,9 @@ public class Riley implements Runnable{
         {
             iex.printStackTrace();
         }
+         **/
 
+        System.out.println("Riley started");
         while(true)
         {
             home.distributeCandy();
