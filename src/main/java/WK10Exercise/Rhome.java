@@ -24,6 +24,7 @@ public class Rhome {
 
             if (listOfChildren.size() == 0) {
                 try {
+                    System.out.println("Riley goes back to watching TV");
                     listOfChildren.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -63,7 +64,7 @@ public class Rhome {
 
         listOfChildren.add(child);
         System.out.println("Child " + child.getName() + " rings the bell");
-        if (listOfChildren.size() == 1) {
+        if (listOfChildren.size() > 0) {
             listOfChildren.notify();
         }
     }
